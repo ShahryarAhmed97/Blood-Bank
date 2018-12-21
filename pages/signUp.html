@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styleSheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse" style="color:rgb(238, 113, 113)">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand my-color" href="../index.html">Saylani Blood Bank</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <!-- <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul> -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+                    <li><a href="./signIn.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="col-md-8 col-md-offset-2 text-center heading">
+        <h2 >Sign Up</h2>
+    </div>
+    <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="fullName" type="text" class="form-control" name="fullName" placeholder="Full Name">
+        </div>
+       
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+            <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+        </div>
+        <br>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <br>
+        
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+            <input id="address" type="text" class="form-control" name="address" placeholder="Address">
+        </div>
+        <br>
+        
+        <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                <input id="phNo" type="number" class="form-control" name="phNo" placeholder="Phone Number">
+            </div>
+        <br>
+
+        <div class="input-group" style="width:30" class="col-md-8 col-md-offset-2">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input id="age" type="age" class="form-control" name="age" placeholder="Age" style="width:30">
+        </div>
+       
+        <br>
+        <div class="input-group" style="width:30" class="col-md-8 col-md-offset-2">
+             <span class="input-group-addon"><i class="glyphicon glyphicon-tint"></i></span>
+             <select name="bldGrp" id="bldGrp"  style="height:30px ; width:120px; text-align: center ; color:rgb(238, 113, 113)">
+                 <option value="Blood Group">Blood Group</option>
+                 <option value="A+" >A+</option>
+                 <option value="A-">A-</option>
+                 <option value="B+">B+</option>
+                 <option value="B-">B-</option>
+                 <option value="AB+">AB+</option>
+                 <option value="AB-">AB-</option>
+                 <option value="O+">O+</option>
+                 <option value="O-">O-</option>
+
+             </select>
+             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; 
+             <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+
+                     <input id="dob" type="date" name="dob" placeholder="Date Of Birth" style="height:30px ; width:120px; text-align: center ; color:rgb(238, 113, 113)">
+                 
+         </div>
+        <br>
+
+          <div class="radio" style="color:rgb(238, 113, 113)">
+           <b> Gender</b>
+           &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+           &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+           <b > SignUp As</b>
+               <br>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <label><input type="radio" name="gender" checked>Male</label>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <label><input type="radio" name="gender">Female</label>
+            &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;   &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+
+            <label><input type="radio" name="usertype" checked>Donor</label>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <label><input type="radio" name="usertype">Acceptor</label>
+
+
+          </div>
+          
+           
+            
+
+
+           
+<br>
+           <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+            <button class="btn btn-danger" id="signUp" onclick="signUpFun()">Sign Up</button>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+            <div class="loader" id="loaders"></div>
+        </div>
+        
+    </div>
+
+
+
+    <script src="../scripts/signUp.js"></script>
+</body>
+
+</html>

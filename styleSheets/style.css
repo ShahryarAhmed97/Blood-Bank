@@ -1,0 +1,55 @@
+.navbar{
+    background-color: rgb(143, 8, 8);
+    color: white !important;
+    border: 2px solid rgb(143, 8, 8);
+}
+#radioBtn .notActive{
+    color: #3276b1;
+    background-color: #fff;
+}
+
+input::placeholder{
+    color: rgb(238, 113, 113) !important;
+
+}
+
+
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+}
+
+.my-color{
+    color: white !important;
+
+}
+h1,h2{
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(143, 8, 8);
+}
+h1{
+    font-size: 55px;
+}
+
+
+tr{
+    font-size: 1.2em;
+
+    color: rgb(163, 16, 16);
+    border: 2px solid rgb(54, 49, 49);
+
+}
+td{
+    border: 2px solid rgb(54, 49, 49);
+
+}
+#tHead{
+    font-size: 1.7em;
+    background-color: rgb(163, 16, 16);
+    color: white !important;
+}
+table{
+    /* border:2px solid black; */
+     width: 100%;
+    text-align: center;
+}
