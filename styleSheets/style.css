@@ -46,10 +46,12 @@ td{
 #tHead{
     font-size: 1.7em;
     background-color: rgb(163, 16, 16);
-    color: white !important;
+ /* background-color:rgb(240, 212, 212); */
+ color: white !important;
 }
 table{
-    /* border:2px solid black; */
      width: 100%;
     text-align: center;
+     background-color:rgb(240, 212, 212);
+
 }

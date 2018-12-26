@@ -31,6 +31,14 @@ let phNo=document.getElementById('phNo').value;
     let dob=document.getElementById('dob').value;
     let bldGrp = document.getElementById("bldGrp");
     let bldGrpSlct = bldGrp.options[bldGrp.selectedIndex].text;
+    
+    var emailCheck=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if(email.match(emailCheck)){
+    
+     
+
+    if(fullName!='' || address!=''  || phNo!='' || password!='' || dob!='' ||bldGrp!='' ){
+    
   
 let gender='';
     if(document.getElementsByName('gender')[0].checked){
@@ -91,4 +99,19 @@ var errMsg=error.message;
 console.log(errMsg)
 
     });
+
+    
+}
+
+else{
+    alert('Plz Fill the form Correctly');
+}
+
+
+    }
+else{
+    alert('email is badly formatted')
+}
+
+
 }

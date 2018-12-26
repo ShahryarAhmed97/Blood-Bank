@@ -34,51 +34,48 @@
                     <li><a href="#">Page 3</a></li>
                 </ul> -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a  id="signin"><span class="glyphicon glyphicon-log-in"></span>
-                            Sign In</a></li>
-                    <li><a id="logout" onClick="signOutFun()"><span class="glyphicon glyphicon-log-out"></span>
-                            Log Out</a></li>
+                   
+                    <li><a href="javaScript:Void(0)" id="logout" onClick="signOutFun()"><span class="glyphicon glyphicon-log-out"></span>
+                            Sign Out</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+  
 
-    <h2> Donor </h2>
-
-    
 <center>
-        <div >
-           <b style="color:rgb(238, 113, 113)">Search By Blood Group</b>&nbsp; &nbsp; &nbsp; &nbsp;
-                <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-tint"></i></span> -->
-                <select onchange="bldGrpSearch()" name="bldGrp" id="bldGrp"  style="height:30px ; width:120px; text-align: center ; color:rgb(238, 113, 113)">
+        <h2> Donors </h2>
+    <div >
+       <b style="color:rgb(238, 113, 113)">Search By Blood Group</b>&nbsp; &nbsp; &nbsp; &nbsp;
+            <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-tint"></i></span> -->
+            <select onchange="bldGrpSearch1()" name="bldGrp" id="bldGrp"  style="height:30px ; width:120px; text-align: center ; color:rgb(238, 113, 113)">
                     <option value="Blood Groups" > Blood Groups</option>
-                    <option value="A+" >A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="AB+" >AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-    
-                </select>
-                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
-                <button class="btn btn-warning"onClick="window.location.reload()">Reset</button>
-        
-    
-        </div>
-    </center>
-    
-    <br><br>
 
-  
+                <option value="A+" >A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+" >AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
 
-  
-    <div class="col-md-10 col-md-offset-1" >
+            </select>
+            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+            <button class="btn btn-warning"onClick="window.location.reload()">Reset</button>
+    
+
+    </div>
+</center>
+
+<br><br>
+
+    
+        <div class="col-md-10 col-md-offset-1"  >
             <table >
                     <thead>
-                        <tr id="tHead">
+                        <tr  id="tHead">
                         <td>Name</td>
                        <td>Date Of Birth</td>
                         <td>Age</td>
@@ -92,7 +89,7 @@
                        
                       
                     </thead>
-                    <tbody id="acceptors">
+                    <tbody id="donors">
         
                     </tbody>
                 </table>
