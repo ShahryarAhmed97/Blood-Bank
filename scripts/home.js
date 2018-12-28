@@ -8,6 +8,8 @@ var config = {
   };
   firebase.initializeApp(config);
 
+  
+
   function signOutFun(){
 
     firebase.auth().signOut()
@@ -15,9 +17,9 @@ var config = {
       localStorage.setItem('userObj',JSON.stringify({user:null}))
 
       localStorage.setItem('currentUserId',null)
-      history.back(1);
+      // history.back(2);
 
-      // window.location.href='../pages/signIn.html'
+      window.location.href='../pages/signIn.html'
 
     })
     .catch((error)=>{
@@ -29,9 +31,13 @@ var config = {
 
 
   function loadFun(){
-
     let userUid=localStorage.getItem('currentUserId')
     console.log(userUid)
+
+    if(userUid!==null){
+
+    
+    
 
     firebase.database().ref("users/" + userUid)
     .once("value",(data)=>{
@@ -65,7 +71,6 @@ var config = {
                     <td>${  objData[key].email}</td>
                     <td>${objData[key].phNo}</td>
                     <td>${  objData[key].address}</td>
-                    <td>${  objData[key].usertype}</td>
 
 
            </tr>
@@ -100,7 +105,6 @@ var config = {
            <td>${objData[key].bldGrpSlct}</td>
            <td>${  objData[key].email}</td>
            <td>${  objData[key].address}</td>
-           <td>${  objData[key].usertype}</td>
 
 
            <td>${objData[key].phNo}</td>
@@ -120,10 +124,16 @@ var config = {
 
     })
 
-   
+  }
+  else{
+    alert('lg gay')
+    // window.location.href='../pages/signIn.html'
+  }
 
 
   }
+
+
   function reload(){
 
   }
@@ -173,7 +183,6 @@ var config = {
                     <td>${  objData[key].email}</td>
                     <td>${objData[key].phNo}</td>
                     <td>${  objData[key].address}</td>
-                    <td>${  objData[key].usertype}</td>
 
 
            </tr>
@@ -188,9 +197,9 @@ var config = {
         }
 
         if(document.getElementById('acceptors').innerHTML==''){
-          document.getElementById('acceptors').innerHTML=
+          document.getElementById('acceptorDiv').innerHTML=
           `
-          <h1>Sorry  Acceptors No Match Found</h1>
+          <h1>Sorry  No Match Found</h1>
           `
 
         }
@@ -248,7 +257,6 @@ var config = {
                     <td>${  objData[key].email}</td>
                     <td>${objData[key].phNo}</td>
                     <td>${  objData[key].address}</td>
-                    <td>${  objData[key].usertype}</td>
 
 
            </tr>
@@ -263,7 +271,7 @@ var config = {
         }
 
         if(document.getElementById('donors').innerHTML==''){
-          document.getElementById('donors').innerHTML=
+          document.getElementById('donorDiv').innerHTML=
           `
           <h1>Sorry No Match Found</h1>
           `
@@ -280,81 +288,6 @@ var config = {
 
 
   }
-
-
-
-
-
-
-  // function bldGrpSearch2(){
-
-  //   var bldGrp=document.getElementById('bldGrp').value;
-  //   bldGrp.innerHTML=''
-  //   console.log(bldGrp)
-
-
-    
-
-  //   let userUid=localStorage.getItem('currentUserId')
-  //   console.log(userUid)
-
-  //   firebase.database().ref("users/" + userUid)
-  //   .once("value",(data)=>{
-  //     var userObj=data.val();
-
-  //   if(userObj.usertype=='acceptor'){
-  
-
-  //     firebase.database().ref("users/")
-  //     .once("value",(data)=>{
-  //       let objData=data.val();
-
-  //       for (var key in objData) {
-  //         if(objData[key].usertype=='donor')
-  //         // {            console.log(objData[key].usertype)
-  //            if(objData[key].bldGrpSlct==bldGrp){
-  //             // console.log(objData[key].bldGrpSlct)
-  //             // console.log(bldGrp+"match" +objData[key].fullName)
-  //           document.getElementById('acceptors').innerHTML+=
-  //           `
-  //           <tr>
-  //                   <td>${ objData[key].fullName}</td>
-  //                   <td>${objData[key].dob}</td>
-  //                   <td>${objData[key].age}</td>
-  //                   <td>${ objData[key].gender}</td>
-  //                   <td>${objData[key].bldGrpSlct}</td>
-  //                   <td>${  objData[key].email}</td>
-  //                   <td>${objData[key].phNo}</td>
-  //                   <td>${  objData[key].address}</td>
-
-  //          </tr>
-  //           `
-  //           }
-                
-  //           else{
-  //             document.getElementById('donors').innerHTML=''
-  //           }
-          
-
-
-
-  //         }
-            
-          
-        
-  //       if(document.getElementById('acceptors').innerHTML==''){
-  //         document.getElementById('acceptors').innerHTML=
-  //         `
-  //         <h1>Sorry No Match Found</h1>
-  //         `
-
-  //       }
-  //     })
-
-  //   }
-    
-  //   })
-  // }
 
 
 

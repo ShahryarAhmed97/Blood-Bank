@@ -14,7 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body onload="loadFun()">
+<body onload="loadFun() ">
 
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -34,8 +34,9 @@
                     <li><a href="#">Page 3</a></li>
                 </ul> -->
                 <ul class="nav navbar-nav navbar-right">
-                   
-                    <li><a href="javaScript:Void(0)" id="logout" onClick="signOutFun()"><span class="glyphicon glyphicon-log-out"></span>
+                        <li><a  href="../pages/userAreaAcceptor.html"><span class="glyphicon glyphicon-user"></span>
+                            My Profile</a></li>
+                    <li><a  id="logout" href='#'  onClick="signOutFun()"><span class="glyphicon glyphicon-log-out"></span>
                             Sign Out</a></li>
                 </ul>
             </div>
@@ -72,7 +73,8 @@
 <br><br>
 
     
-        <div class="col-md-10 col-md-offset-1"  >
+        <div class="col-md-10 col-md-offset-1" >
+           
             <table >
                     <thead>
                         <tr  id="tHead">
@@ -93,6 +95,10 @@
         
                     </tbody>
                 </table>
+
+                <div id="donorDiv" style="text-align:center" >
+
+                    </div>
             
         
                    

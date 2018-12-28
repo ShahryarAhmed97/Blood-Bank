@@ -9,6 +9,7 @@ var config = {
   firebase.initializeApp(config);
 
 
+
   function signInFun(){
 
       let email=document.getElementById('email').value;
@@ -86,23 +87,7 @@ var config = {
 
 
 
-        // firebase.database().ref('donors/'+ userUid)
-        // .once('value',(data)=>{
-        //     let userData=data.val()
-        // console.log(userData.usertype)
-        //         if(userData.usertype=='Donor'){
-        //             window.location.href='../pages/donor.html'
-        //           }
-        //           else{
-        //             window.location.href='../pages/acceptor.html'
-        //           }
-
-
-            
-      
-     
-
-        // })
+    
 
 
 
