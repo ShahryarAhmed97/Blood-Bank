@@ -22,7 +22,7 @@ input::placeholder{
     color: white !important;
 
 }
-h1,h2{
+h1,h2,h3{
     
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(143, 8, 8);
@@ -54,4 +54,12 @@ table{
     text-align: center;
      background-color:rgb(240, 212, 212);
 
+}
+
+
+
+#available{
+    width: 30px;
+    height: 40px;
+   padding: 5px;
 }

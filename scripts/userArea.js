@@ -28,8 +28,22 @@ function signOutFun(){
   }
 
 document.getElementById('userAreaDiv').style.display='none'
+
   function userArea(){
       let userUid=localStorage.getItem('currentUserId');
+      firebase.database().ref('status/'+userUid)
+      .once('value',(data)=>{
+          var statusData=data.val();
+
+          if(statusData===true){
+              document.getElementById('available').checked=true;
+          }
+          else{
+            document.getElementById('available').checked=false;
+
+          }
+
+      })
 
       firebase.database().ref('users/'+userUid)
       .once('value',(data)=>{
@@ -138,14 +152,38 @@ else{
 
 
 function delUserFun(){
+   
+    
     let userUid=localStorage.getItem('currentUserId');
+    
     firebase.database().ref('users/'+ userUid).remove()
     .then((success)=>{
         console.log(success)
 
         localStorage.setItem('currentUserId',JSON.stringify({user:'null'}));
-        location.href='../pages/signIn.html';
 
     })
+
+    var user = firebase.auth().currentUser;
+
+user.delete().then(function() {
+    location.href='../pages/signIn.html';
+
+}).catch(function(error) {
+    var errMsg=error.message;
+    alert(errMsg)
+});
   
+}
+
+
+function donateFun(){
+    var userUid=localStorage.getItem('currentUserId');
+    var status=document.getElementsByName('available')[0].checked;
+    
+        firebase.database().ref('status/'+userUid)
+        .set(status);
+
+    
+
 }

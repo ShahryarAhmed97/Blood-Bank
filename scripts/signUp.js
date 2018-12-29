@@ -1,13 +1,5 @@
 
 
-
-
-  // Initialize Firebase
-
-
-  // Initialize Firebase
- 
-
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyC-yDOu8M2RAJKv883HAtxcPBS4Z2Zy7BU",
@@ -96,7 +88,7 @@ let gender='';
  })
 .catch((error)=>{
 var errMsg=error.message;
-console.log(errMsg)
+alert(errMsg)
 
     });
 

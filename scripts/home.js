@@ -24,6 +24,8 @@ var config = {
     })
     .catch((error)=>{
 
+var errMsg=error.message;
+alert(errMsg)
     });
 
   }
@@ -33,8 +35,8 @@ var config = {
   function loadFun(){
     let userUid=localStorage.getItem('currentUserId')
     console.log(userUid)
-
     if(userUid!==null){
+     
 
     
     
@@ -57,8 +59,8 @@ var config = {
         for (var key in objData) {
           if(objData[key].usertype=='acceptor')
           {
+            
 
-            console.log(objData[key].email)
             
             document.getElementById('acceptors').innerHTML+=
             `
@@ -71,6 +73,7 @@ var config = {
                     <td>${  objData[key].email}</td>
                     <td>${objData[key].phNo}</td>
                     <td>${  objData[key].address}</td>
+
 
 
            </tr>
@@ -86,6 +89,8 @@ var config = {
 
     }
     else{
+      var status='0';
+
 
       firebase.database().ref("users/")
       .once("value",(data)=>{
@@ -93,7 +98,20 @@ var config = {
 
         for (var key in objData) {
           if(objData[key].usertype=='donor')
-          {            console.log(objData[key].usertype)
+          {  
+                  
+
+           checkStatus(key); 
+var statusBool=localStorage.getItem('available')
+console.log(statusBool)
+            if(statusBool==='true')
+            {
+              status="Available for donation"
+      
+            }
+            else {
+              status="Not Avaiable for Donation"
+            }
 
             document.getElementById('donors').innerHTML+=
            `
@@ -105,15 +123,16 @@ var config = {
            <td>${objData[key].bldGrpSlct}</td>
            <td>${  objData[key].email}</td>
            <td>${  objData[key].address}</td>
-
-
            <td>${objData[key].phNo}</td>
+           <td>${status}</td>
+
+
 
   </tr>
           `
           }
          
-            
+
           
         }
       })
@@ -127,16 +146,13 @@ var config = {
   }
   else{
     alert('lg gay')
-    // window.location.href='../pages/signIn.html'
+    window.location.href='../pages/signIn.html'
   }
 
 
   }
 
 
-  function reload(){
-
-  }
 
 
 
@@ -288,6 +304,22 @@ var config = {
 
 
   }
+
+
+    function checkStatus(key){
+
+   firebase.database().ref('status/'+key)
+   .once('value',(data)=>{
+    var status=data.val();
+   localStorage.setItem('available',status)
+   
+   
+  })
+ 
+   
+}
+
+
 
 
 

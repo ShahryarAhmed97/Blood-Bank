@@ -45,6 +45,8 @@ var config = {
 
     })
     .catch((error)=>{
+        var errMsg=error.message;
+alert(errMsg)
 
     });
 
