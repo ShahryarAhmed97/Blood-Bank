@@ -1,0 +1,45 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.container{
+    /* display: flex; */
+    height: 60px;
+    width: 1360px;
+    border: 1px solid black;
+
+
+
+}
+.head{
+    text-align: center;
+
+  height: 50px;
+    width: 1400px;
+    border: 1px solid green;
+
+
+}
+.links{
+    /* text-align: center; */
+
+    border: 1px solid blue;
+
+  
+    height: 50px;
+    width: 1400px;
+
+
+}
+
+ul{
+    text-decoration: none;
+
+    
+
+
+}
+li{
+    padding: 15px;
+
+}

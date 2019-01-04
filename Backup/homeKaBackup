@@ -72,27 +72,22 @@ alert(errMsg)
             
             document.getElementById('acceptors').innerHTML+=
             `
-            <div class="col-md-6" style='border: 2px solid white'>
-         <div class="col-md-4 text-center">
-             <img src="${objData[key].userImg}" class="imgMargin" alt="profilepic" id="profilepic" style="height:150px;">
-         </div>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <div class="col-md-8">
-             <div class="userInfo">
-                 <p><span class="bold">Email:</span> ${objData[key].email}</p>
-                 <p><span class="bold">Name:</span> ${objData[key].fullName}</p>
-                 <p><span class="bold">Gender:</span> ${objData[key].gender}</p>
-                 <p><span class="bold">Contact No:</span> ${objData[key].phNo}</p>
-                 <p><span class="bold">Blood Type:</span> ${objData[key].bldGrpSlct}</p>
-                 <p><span class="bold">User Type:</span> ${objData[key].dob}</p>
-                 <p><span class="bold">Address:</span> ${objData[key].address}</p>
-                     
-             </div>
-         </div>
-     </div>
- 
-     
-     `
+            <tr>
+                    <td>${ objData[key].fullName}</td>
+                    <td>${objData[key].dob}</td>
+                    <td>${objData[key].age}</td>
+                    <td>${ objData[key].gender}</td>
+                    <td>${objData[key].bldGrpSlct}</td>
+                    <td>${  objData[key].email}</td>
+                    <td>${objData[key].phNo}</td>
+                    <td>${  objData[key].address}</td>
+
+                    <td> <img src=${   objData[key].userImg} height='100px' width='100px' ></td>
+
+
+
+           </tr>
+            `
 
           }
             
@@ -137,30 +132,23 @@ console.log(statusBool)
 
             document.getElementById('donors').innerHTML+=
            `
-           <div class="col-md-6" style='border: 2px solid white'>
-        <div class="col-md-4 text-center">
-            <img src="${objData[key].userImg}" class="imgMargin" alt="profilepic" id="profilepic" style="height:150px;">
-        </div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <div class="col-md-8">
-            <div class="userInfo">
-                <p><span class="bold">Email:</span> ${objData[key].email}</p>
-                <p><span class="bold">Name:</span> ${objData[key].fullName}</p>
-                <p><span class="bold">Gender:</span> ${objData[key].gender}</p>
-                <p><span class="bold">Contact No:</span> ${objData[key].phNo}</p>
-                <p><span class="bold">Blood Type:</span> ${objData[key].bldGrpSlct}</p>
-                <p><span class="bold">User Type:</span> ${objData[key].dob}</p>
-                <p><span class="bold">Address:</span> ${objData[key].address}</p>
-                    
-            </div>
-        </div>
-    </div>
+           <tr>
+           <td>${ objData[key].fullName}</td>
+           <td>${objData[key].dob}</td>
+           <td>${objData[key].age}</td>
+           <td>${ objData[key].gender}</td>
+           <td>${objData[key].bldGrpSlct}</td>
+           <td>${  objData[key].email}</td>
+           <td>${  objData[key].address}</td>
+           <td>${objData[key].phNo}</td>
+           <td>${status}</td>
+           <td> <img src=${   objData[key].userImg} height='100px' width='100px' ></td>
 
-    
-    `
 
-           
- 
+
+
+  </tr>
+          `
           }
          
 
@@ -227,27 +215,21 @@ console.log(statusBool)
       if(objData[key].bldGrpSlct==bldGrp){
             document.getElementById('acceptors').innerHTML+=
             `
-            <div class="col-md-6" style='border: 2px solid white'>
-         <div class="col-md-4 text-center">
-             <img src="${objData[key].userImg}" class="imgMargin" alt="profilepic" id="profilepic" style="height:150px;">
-         </div>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <div class="col-md-8">
-             <div class="userInfo">
-                 <p><span class="bold">Email:</span> ${objData[key].email}</p>
-                 <p><span class="bold">Name:</span> ${objData[key].fullName}</p>
-                 <p><span class="bold">Gender:</span> ${objData[key].gender}</p>
-                 <p><span class="bold">Contact No:</span> ${objData[key].phNo}</p>
-                 <p><span class="bold">Blood Type:</span> ${objData[key].bldGrpSlct}</p>
-                 <p><span class="bold">User Type:</span> ${objData[key].dob}</p>
-                 <p><span class="bold">Address:</span> ${objData[key].address}</p>
-                     
-             </div>
-         </div>
-     </div>
- 
-     
-     `
+            <tr>
+                    <td>${ objData[key].fullName}</td>
+                    <td>${objData[key].dob}</td>
+                    <td>${objData[key].age}</td>
+                    <td>${ objData[key].gender}</td>
+                    <td>${objData[key].bldGrpSlct}</td>
+                    <td>${  objData[key].email}</td>
+                    <td>${objData[key].phNo}</td>
+                    <td>${  objData[key].address}</td>
+                    <td> <img src=${   objData[key].userImg} height='100px' width='100px' ></td>
+
+
+
+           </tr>
+            `
             }
 
            
@@ -315,27 +297,21 @@ console.log(statusBool)
       if(objData[key].bldGrpSlct==bldGrp){
             document.getElementById('donors').innerHTML+=
             `
-            <div class="col-md-6" style='border: 2px solid white'>
-         <div class="col-md-4 text-center">
-             <img src="${objData[key].userImg}" class="imgMargin" alt="profilepic" id="profilepic" style="height:150px;">
-         </div>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-         <div class="col-md-8">
-             <div class="userInfo">
-                 <p><span class="bold">Email:</span> ${objData[key].email}</p>
-                 <p><span class="bold">Name:</span> ${objData[key].fullName}</p>
-                 <p><span class="bold">Gender:</span> ${objData[key].gender}</p>
-                 <p><span class="bold">Contact No:</span> ${objData[key].phNo}</p>
-                 <p><span class="bold">Blood Type:</span> ${objData[key].bldGrpSlct}</p>
-                 <p><span class="bold">User Type:</span> ${objData[key].dob}</p>
-                 <p><span class="bold">Address:</span> ${objData[key].address}</p>
-                     
-             </div>
-         </div>
-     </div>
- 
-     
-     `
+            <tr>
+                    <td>${ objData[key].fullName}</td>
+                    <td>${objData[key].dob}</td>
+                    <td>${objData[key].age}</td>
+                    <td>${ objData[key].gender}</td>
+                    <td>${objData[key].bldGrpSlct}</td>
+                    <td>${  objData[key].email}</td>
+                    <td>${objData[key].phNo}</td>
+                    <td>${  objData[key].address}</td>
+                    <td> <img src=${   objData[key].userImg} height='100px' width='100px' ></td>
+
+
+
+           </tr>
+            `
             }
 
            
@@ -379,26 +355,6 @@ console.log(statusBool)
 }
 
 
-// `
-// <div class="row">
-// <div class="col-md-3 text-center">
-//     <img src="${imgUrl}" class="imgMargin" alt="profilepic" id="profilepic" style="height:280px;">
-//         <a href="../pages/upload.html" class="chngImg"><label>Change Image</label></a>
-// </div>
-// <div class="col-md-4">
-//     <div class="userInfo">
-//         <p><span class="bold">Email:</span> ${email}</p>
-//         <p><span class="bold">Name:</span> ${userName}</p>
-//         <p><span class="bold">Gender:</span> ${gender}</p>
-//         <p><span class="bold">Contact No:</span> ${phoneno}</p>
-//         <p><span class="bold">Blood Type:</span> ${userblood}</p>
-//         <p><span class="bold">User Type:</span> ${userType}</p>
-//         <p><span class="bold">Address:</span> ${address}</p>
-//         <p><span class="bold">City:</span> ${city}</p>
-//             <div class="text-right btnCenter">
-//                 <button onclick="editBtn()" class="btn btn-primary imgMargin">Edit Profile</button>
-//             </div>
-//     </div>
-// </div>
-// </div>
-// `
+
+
+

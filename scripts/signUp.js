@@ -23,13 +23,15 @@ let phNo=document.getElementById('phNo').value;
     let dob=document.getElementById('dob').value;
     let bldGrp = document.getElementById("bldGrp");
     let bldGrpSlct = bldGrp.options[bldGrp.selectedIndex].text;
-    
+    let age=document.getElementById('age').value;
+    let userImg=document.getElementById('img').files[0];
+
     var emailCheck=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     if(email.match(emailCheck)){
     
      
 
-    if(fullName!='' || address!=''  || phNo!='' || password!='' || dob!='' ||bldGrp!='' ){
+    if(fullName!='' || address!=''  || phNo!='' || password!='' || dob!='' ||bldGrp!='' || age!=''){
     
   
 let gender='';
@@ -56,7 +58,6 @@ let gender='';
 
 
 
-    let age=document.getElementById('age').value;
     
 
 
@@ -79,16 +80,44 @@ let gender='';
         }
         let userUid=firebase.auth().currentUser.uid
 
-        firebase.database().ref('users/' + userUid)
-        .set(userObj).then(()=>{
-            window.location.href='../pages/signIn.html'
+        firebase.storage().ref().child(`userProfiles/${userUid}/${userImg.name}`).put(userImg)
+        .then((success)=>{
+            success.ref.getDownloadURL()
+            .then((imgUrl)=>{
+                userObj.userImg=imgUrl
+                firebase.database().ref('users/' + userUid)
+                .set(userObj).then(()=>{
+                    window.location.href='../pages/signIn.html'
+        
+                }).catch((error)=>{
+                    var errMsg=error.message;
+                       alert(errMsg)
+                })
+
+
+            })
+            .catch((error)=>{
+                var errMsg=error.message;
+                    alert(errMsg)
+
+
+            })
+
+            
 
         })
+        .catch((error)=>{
+            var errMsg=error.message;
+            alert(errMsg)
+
+        });
+
+       
 
  })
 .catch((error)=>{
-var errMsg=error.message;
-alert(errMsg)
+            var errMsg=error.message;
+            alert(errMsg)
 
     });
 
