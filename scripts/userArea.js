@@ -237,8 +237,10 @@ function delUserFun(){
 
     firebase.storage().ref().child(`userProfiles/${userUid}`).delete()
     .then((success)=>{
+        console.log(success)
    })
-    .catch(()=>{
+    .catch((error)=>{
+        console.log(error)
 
     })
 
