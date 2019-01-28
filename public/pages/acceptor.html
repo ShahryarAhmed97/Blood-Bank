@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Auth</title>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styleSheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="loadFun()">
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand my-color" href="../index.html">Saylani Blood Bank</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <!-- <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul> -->
+                <ul class="nav navbar-nav navbar-right">
+                        <li><a  href="../pages/userAreaDonor.html"><span class="glyphicon glyphicon-user"></span>
+                            My Profile</a></li>
+                    <li><a id="logout" href='#' onClick="signOutFun()"><span class="glyphicon glyphicon-log-out"></span>
+                            Sign Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    
+<center>
+        <h2> Acceptors </h2>
+
+        <div  >
+           <b style="color:rgb(238, 113, 113)">Search By Blood Group</b>&nbsp; &nbsp; &nbsp; &nbsp;
+                <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-tint"></i></span> -->
+                <select onchange="bldGrpSearch2()" name="bldGrp" id="bldGrp"  style="height:30px ; width:120px; text-align: center ; color:rgb(238, 113, 113)">
+                    <option value="Blood Groups" > Blood Groups</option>
+                    <option value="A+" >A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+" >AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+    
+                </select>
+                &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                <button class="btn btn-warning"onClick="window.location.reload()">Reset</button>
+        
+    
+        </div>
+    </center>
+    
+    <br><br>
+
+  
+
+  
+    <div class="col-md-10 col-md-offset-1"  id="acceptors">
+       
+                      
+                <div id="acceptorDiv" style="text-align:center">
+
+                    </div>
+                   
+        
+    </div>
+    <script src="../scripts/home.js"></script>
+</body>
+
+</html>
+
+
+<!-- <table class="jumbotron" >
+    <thead>
+        <tr id="tHead">
+        <td>Name</td>
+       <td>Date Of Birth</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Blood Group</td>
+        <td>Email</td>
+        <td>Phone No</td>
+        <td>Address</td>
+        <td>Profile</td>
+    </tr>
+       
+      
+    </thead>
+    <tbody id="acceptors">
+
+    </tbody>
+</table> -->

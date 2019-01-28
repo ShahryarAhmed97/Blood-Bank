@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Auth</title>
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styleSheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body >
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand my-color" href="./index.html">Saylani Blood Bank</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <!-- <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul> -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./pages/signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="./pages/signIn.html"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+          
+        
+
+    <div class="container" >
+            <div class="jumbotron" style="background-color:rgb(240, 212, 212)">
+                    <h1 style='color:rgb(155, 10, 10)'> Saylani Blood Bank  </h1>
+                    <b  style='color:rgb(155, 10, 10)'>Pakistan's leading Blood Bank serving peoples from decades with passion and generousity</b>
+                    <!-- <img src="./images/img6.jpg" alt=""> -->
+                </div>
+                
+          </div>
+        
+
+    <div class="col-md-8 col-md-offset-2 text-center jumbotron col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1" style="background-color:rgb(240, 212, 212)">
+
+      <div class="panel panel-danger">
+            <div class="panel-heading"><h4  style='color:rgb(155, 10, 10); text-align: left' >Why Donate Blood</h4></div>
+            <div class="panel-body"><p  style='color:rgb(155, 10, 10)'>Blood is the most precious gift that anyone can give to another person the gift of life. A decision to donate your blood can save a life, or even several if your blood is separated into its components red cells, platelets and plasma which can be used individually for patients with specific conditions.</p></div>
+          <img src="./images/img10.png" alt="img10" class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+        </div>
+
+        </div>
+
+        <div class="col-md-8 col-md-offset-2 text-center jumbotron col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1" style="background-color:rgb(240, 212, 212)">
+
+
+        <div class="panel panel-danger">
+                <div class="panel-heading"><h4  style='color:rgb(155, 10, 10); text-align: left' >Types of  Blood Group</h4></div>
+                <div class="panel-body"><p  style='color:rgb(155, 10, 10)'>A blood type is a classification of blood, based on the presence and absence of antibodies and inherited antigenic substances on the surface of red blood cells</p></div>
+              <img src="./images/img7.jpg" alt="img7" class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+            </div>
+
+            <!-- <div  >
+                <img src="./images/img8.png" alt="img8" height='500px'; width='300px'>
+            </div> -->
+
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script>
+    window.addEventListener('load',()=> {
+   
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+            .then(() => {
+                console.log('service worker')
+            })
+    }
+})
+    
+    </script>
+</body>
+
+</html>
